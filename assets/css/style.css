@@ -29,6 +29,10 @@ body {
     line-height: 1.5;
 }
 
+section {
+    scroll-margin-top: 10rem;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -69,6 +73,10 @@ span {
     align-items: center;
 }
 
+.nav {
+    position: relative;
+}
+
 .nav-list {
     list-style: none;
     display: flex;
@@ -88,10 +96,6 @@ span {
 /*Menu Final*/
 
 /*Hero Inicio*/
-
-.hero {
-    padding: 8rem 3rem;
-}
 
 .hero-container {
     max-width: var(--max-width);
@@ -261,7 +265,7 @@ span {
     transition: opacity 0.3s ease;
 }
 
-.projects-link:hover a {
+.projects-link a:hover {
     opacity: 0.7;
 }
 
@@ -495,6 +499,10 @@ span {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -544,7 +552,46 @@ span {
     transform: translateY(-8px) rotate(-45deg);
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-card img {
+        height: 18rem;
+    }
+
+    .projects-description {
+        font-size: 1.5rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--gap);
+    }
+
+    .hero-img img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .projects-info {
+        padding: 2.5rem;
+    }
+
+    .hero-container {
+        padding-top: 6rem;
+    }
+
+    .projects,
+    .about,
+    .skills,
+    .contact {
+        padding: 6rem 2rem;
+    }
 }
+
+
 
 @media (max-width: 480px) {
     
@@ -559,4 +606,5 @@ span {
     .contact-button {
         width: 100%;
     }
+
 }
